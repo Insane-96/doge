@@ -55,30 +55,29 @@ doge_vec2 *doge_vec2_div(doge_vec2 *vecA, doge_vec2 *vecB){
 }
 
 doge_vec2 *doge_vec2_normalize(doge_vec2 *vec){
-    float *length = doge_vec2_length(vec);
-    if (*length == 0){
+    float length = doge_vec2_length(vec);
+    if (length == 0){
         fprintf(stderr, "Cannot divide by 0\n");
     }
-    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", *length, vec->x, vec->y);
+    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", length, vec->x, vec->y);
     doge_vec2 *normalized = malloc(sizeof(doge_vec2));
-    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", *length, vec->x, vec->y);
-    if (*length == 0){
+    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", length, vec->x, vec->y);
+    if (length == 0){
         normalized->x = 0;
         normalized->y = 0;
     }
     else{
-        normalized->x = vec->x / *length;
-        normalized->y = vec->y / *length;
+        normalized->x = vec->x / length;
+        normalized->y = vec->y / length;
     }
     return normalized;
 }
 
-float *doge_vec2_length(doge_vec2 *vec){
+float doge_vec2_length(doge_vec2 *vec){
 	float x = vec->x * vec->x;
 	float y = vec->y * vec->y;
     float sum = x + y;
     float squareroot = (float)sqrt(sum);
-    float *squareroot_ptr = &squareroot;
 	return squareroot_ptr;
 }
 
