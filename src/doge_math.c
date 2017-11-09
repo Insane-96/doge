@@ -59,9 +59,7 @@ doge_vec2 *doge_vec2_normalize(doge_vec2 *vec){
     if (length == 0){
         fprintf(stderr, "Cannot divide by 0\n");
     }
-    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", length, vec->x, vec->y);
     doge_vec2 *normalized = malloc(sizeof(doge_vec2));
-    fprintf(stdout, "lenght: %f, x: %f, y: %f\n", length, vec->x, vec->y);
     if (length == 0){
         normalized->x = 0;
         normalized->y = 0;

@@ -117,7 +117,7 @@ int test_doge_vec2_normalize(){
         return -1;
 
     doge_vec2 *vec = doge_vec2_normalize(vecA);
-    fprintf(stdout, "x: %f, y: %f\n", vec->x, vec->y);
+	
     if (vec->x < 0.894 || vec->x > 0.895)
         return -1;
     
