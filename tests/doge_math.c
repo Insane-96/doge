@@ -104,8 +104,8 @@ int test_doge_vec2_length(){
     if (!vecA)
         return -1;
 
-    float *vec = doge_vec2_length(vecA);
-    if (*vec < 8.94 || *vec > 8.95)
+    float vec = doge_vec2_length(vecA);
+    if (vec < 8.94 || vec > 8.95)
         return -1;
     
     return 0;

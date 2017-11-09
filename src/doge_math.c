@@ -78,16 +78,16 @@ float doge_vec2_length(doge_vec2 *vec){
 	float y = vec->y * vec->y;
     float sum = x + y;
     float squareroot = (float)sqrt(sum);
-	return squareroot_ptr;
+	return squareroot;
 }
 
-float *doge_vec2_distance(doge_vec2 *vecA, doge_vec2 *vecB){
+float doge_vec2_distance(doge_vec2 *vecA, doge_vec2 *vecB){
     doge_vec2 *vecDistance = malloc(sizeof(doge_vec2));
 
     vecDistance->x = vecA->x - vecB->x;
     vecDistance->y = vecA->y - vecB->y;
 
-    float *length = doge_vec2_length(vecDistance);
+    float length = doge_vec2_length(vecDistance);
 
     return length;
 }
@@ -98,12 +98,12 @@ doge_vec2 *doge_vec2_direction(doge_vec2 *vecA, doge_vec2 *vecB){
     vecHeading->x = vecA->x - vecB->x;
     vecHeading->y = vecA->y - vecB->y;
 
-    float *distance = doge_vec2_distance(vecA, vecB);
+    float distance = doge_vec2_distance(vecA, vecB);
 
     doge_vec2 *vecDirection = malloc(sizeof(doge_vec2));
 
-    vecDirection->x = vecHeading->x / *distance;
-    vecDirection->y = vecHeading->y / *distance;
+    vecDirection->x = vecHeading->x / distance;
+    vecDirection->y = vecHeading->y / distance;
 
     return vecDirection;
 }

@@ -13,7 +13,7 @@ doge_vec2 *doge_vec2_mult(doge_vec2 *, doge_vec2 *);
 doge_vec2 *doge_vec2_div(doge_vec2 *, doge_vec2 *);
 float doge_vec2_length(doge_vec2 *);
 doge_vec2 *doge_vec2_normalize(doge_vec2 *);
-float *doge_vec2_distance(doge_vec2 *, doge_vec2 *);
+float doge_vec2_distance(doge_vec2 *, doge_vec2 *);
 doge_vec2 *doge_vec2_direction(doge_vec2 *, doge_vec2 *);
 
 
